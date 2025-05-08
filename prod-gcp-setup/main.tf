@@ -21,6 +21,14 @@ module "service_accounts" {
   source     = "../modules/service_accounts"
   project_id = "elemental-axle-459105-a0"
   accounts   = ["prod-acct","dev-acct"]
+  iam_roles = {
+    "prod-acct" = [
+    "roles/container.defaultNodeServiceAccount"
+  ],
+    "dev-acct" = [
+    "roles/viewer"
+  ]
+  }
 }
 
 module "gke" {
