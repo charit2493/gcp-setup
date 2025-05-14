@@ -105,4 +105,4 @@ module "gke" {
 ### 📌 Notes
 
 - `deletion_protection` is set to `false` by default to allow safe cleanup with `terraform destroy`.
-- Ensure the GCP account you're using has appropriate IAM permissions for Compute Engine, Kubernetes Engine, and IAM APIs.
+- Make sure the GCP account you're using has the necessary permissions for Compute Engine, Kubernetes Engine, and IAM APIs — these are required for what I used in the setup.
